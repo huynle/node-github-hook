@@ -129,7 +129,8 @@ function serverHandler(req, res) {
                 }
 
                 var repo = data.repository.name;
-                var ref = data.ref;
+                // var ref = data.ref;
+                var ref = data.push.changes[0].new.name;
 
                 // and now we emit a bunch of data
                 if (ref) {
